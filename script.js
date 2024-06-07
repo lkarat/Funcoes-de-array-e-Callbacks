@@ -21,8 +21,15 @@ const retornaPares = (lista2Numeros) => {
     }
     return novoArray
 }
-console.log(retornaPares([1,2,3,4,5,6,7,8]));
 
+const imprimirCallback = (array, callback) => {
+console.log(callback(array));
 
+}
+imprimirCallback([1,2,3,4,5,6,7,8,9,10], multiplicaPorTres)
+
+imprimirCallback([1,2,3,4,5,6,7,8,9,10], retornaPares)
+
+imprimirCallback(multiplicaPorTres([1,2,3,4,5,6,7,8,9,10]), retornaPares)
 
 
