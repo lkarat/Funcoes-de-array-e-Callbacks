@@ -28,19 +28,78 @@ imprimirCallback([1,2,3,4,5,6,7,8,9,10], retornaPares)
 
 imprimirCallback(multiplicaPorTres([1,2,3,4,5,6,7,8,9,10]), retornaPares)*/
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+
+
+
+/*const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const letras = ['a', 'b', 'c', 'd', 'e']
 
-const novaListaModificada = letras.map((cadaItem, index, array) => {
+const novaListaModificada = numeros.map((cadaItem, index, array) => {
 
-    return cadaItem
+
+    return cadaItem*3
 })
 console.log(novaListaModificada)
 
 
-const novaListaFiltrada = numeros.filter((cadaItem, index, array)=>{
+const novaListaFiltrada = novaListaModificada.filter((cadaItem, index, array)=>{
     return cadaItem % 2 === 0
         
     })
 
-console.log(novaListaFiltrada);
+console.log(novaListaFiltrada);*/
+
+
+const pokemons = [
+    {
+        nome: 'Bulbasaur',
+        tipo: 'grama',
+        vida: 40
+    },
+    {
+        nome: 'Bellsprout'
+        , tipo: 'grama',
+        vida: 20
+    },
+    {
+        nome: 'Charmander',
+        tipo: 'fogo',
+        vida: 35
+    },
+    {
+        nome: 'Vulpix',
+        tipo: 'fogo',
+        vida: 25
+    },
+    {
+        nome: 'Squirtle',
+        tipo: 'água', vida: 45
+    },
+    {
+        nome: 'Psyduck',
+        tipo: 'água',
+        vida: 25
+    }
+]
+
+const pokemonsVidaCheia = pokemons.map((cadaItem, index)=>{
+
+    return {...cadaItem,vida:100}
+
+})
+
+const pokemonsDeFogo = pokemons.filter((cadaItem,index)=>{
+
+    return cadaItem.tipo==='fogo'
+
+
+
+})
+
+
+console.log(pokemonsVidaCheia);
+
+console.log(pokemonsDeFogo);
